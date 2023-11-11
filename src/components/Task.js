@@ -1,13 +1,13 @@
-import React from "react";
+import React from 'react';
 
-function Task() {
+const Task = ({ task, onDelete }) => {
   return (
-    <div className="task">
-      <div className="label">CATEGORY HERE</div>
-      <div className="text">TEXT HERE</div>
-      <button className="delete">X</button>
-    </div>
+    <li>
+      {task.text} - {task.category}
+      <button onClick={() => onDelete(task.id)}>Delete</button>
+    </li>
   );
-}
+};
 
 export default Task;
+
